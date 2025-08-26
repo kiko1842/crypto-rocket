@@ -1,2 +1,2 @@
 # crypto-rocket
-CosmicCanvas: Suggests a platform for creating art that exists across multiple chains. ​WarpGate: Implies a fast, seamless way to move assets between blockchains.
+Building engaging crypto content & actively navigating volatile markets. Trader | Creator.Crypto market analyst & content creator. Aggressively trading digital assets and sharing insights. #DeFi #Web3
