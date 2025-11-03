@@ -1,98 +1,73 @@
-# Crypto Rocket
+For JavaScript/TypeScript projects:
 
-A small, open-source toolkit for exploring and experimenting with cryptocurrency data and strategies. Crypto Rocket provides simple utilities to fetch market data, run basic indicators, and prototype trading ideas locally. This repository is intended as a starting point for developers who want a lightweight codebase to extend, test, and deploy crypto-related experiments.
+npm install
+# or
+yarn install
 
-> NOTE: This README is a suggested starting draft. Adjust any commands, filenames, or details to match your repository's actual code and structure before publishing.
+Quick Start — Examples
 
-## Quick summary
-- Purpose: Provide utilities to fetch crypto market data, compute simple indicators, and run local experiments.
-- Status: Prototype / early stage — work in progress.
-- License: (Add a LICENSE file — suggested: MIT)
+# Fetch sample data
+python scripts/fetch_data.py --symbol BTCUSDT --interval 1h --limit 500
 
-## Features
-- Fetch market/candlestick data from public APIs (configurable).
-- Simple indicator calculations (SMA, EMA, RSI — examples).
-- Example scripts to run backtests and quick analyses.
-- Dockerfile and simple local run instructions (if present).
+# Run indicator calculation
+python scripts/run_indicator.py --symbol BTCUSDT --indicator sma --period 20
 
-## Installation (local)
-1. Clone the repo:
-   git clone https://github.com/kiko1842/crypto-rocket.git
-   cd crypto-rocket
+# Run a backtest
+python scripts/backtest.py --strategy simple_mean_reversion --symbol BTCUSDT --from 2023-01-01 --to 2024-01-01
 
-2. Create a virtual environment and install dependencies:
-   python -m venv .venv
-   source .venv/bin/activate  # macOS / Linux
-   .venv\Scripts\activate     # Windows PowerShell
-   pip install -r requirements.txt
+Configuration & Secrets
 
-If your project is JavaScript/TypeScript, replace the above with:
-   npm install
-or
-   yarn install
+Store API keys in a .env file (never commit secrets)
 
-## Quick start — examples
-Example: run a sample data fetch script (adjust path/name to your code)
-   python scripts/fetch_data.py --symbol BTCUSDT --interval 1h --limit 500
+Example .env:
 
-Example: run a sample indicator calculation
-   python scripts/run_indicator.py --symbol BTCUSDT --indicator sma --period 20
+API_KEY=your_api_key_here
+API_SECRET=your_api_secret_here
 
-Example: run a local backtest
-   python scripts/backtest.py --strategy simple_mean_reversion --symbol BTCUSDT --from 2023-01-01 --to 2024-01-01
+Docker (Optional)
 
-(Replace the example script names/arguments with actual filenames and CLI options in this repo.)
+# Build
+docker build -t crypto-rocket:local .
 
-## Configuration & secrets
-- Never commit API keys or secrets.
-- Use environment variables or a .env file (and add .env to .gitignore).
-- Example .env:
-   API_KEY=your_api_key_here
-   API_SECRET=your_api_secret_here
+# Run
+docker run --env-file .env --rm crypto-rocket:local python scripts/fetch_data.py --symbol BTCUSDT
 
-## Docker (optional)
-Build:
-   docker build -t crypto-rocket:local .
+Tests & CI
 
-Run:
-   docker run --env-file .env --rm crypto-rocket:local python scripts/fetch_data.py --symbol BTCUSDT
+Use pytest or jest for core functions
 
-## Tests & CI
-- Add a simple test suite (pytest / jest) for core functions: data fetching, indicator calculations, config parsing.
-- Add a GitHub Actions workflow to run linting and tests on push/PR.
+Add GitHub Actions workflow for linting and tests
 
-Suggested minimal CI file: .github/workflows/ci.yml that runs tests and linter.
+Security Checklist
 
-## Security checklist
-- Add a LICENSE file.
-- Add .gitignore to exclude .env, keys, and local artifacts.
-- Run dependency vulnerability scans (Dependabot or `pip-audit` / `npm audit`).
-- Ensure no secrets are committed (use git-secrets or GitHub secret scanning).
+Add .gitignore and LICENSE
 
-## Roadmap (suggested)
-- [ ] README, LICENSE, CONTRIBUTING
-- [ ] Add basic CI (lint + tests)
-- [ ] Add core scripts: data-fetch, indicators, backtest
-- [ ] Add example configs and sample datasets
-- [ ] Add more strategies and performance reporting
-- [ ] Add packaging / Docker image publishing
+Run pip-audit or npm audit
 
-## Contributing
-Contributions are welcome. A suggested CONTRIBUTING.md should include:
-- How to open issues (use templates if you have them)
-- Coding style and tests required
-- How to run local dev environment and tests
-- How to run linters and formatters
+Use git-secrets or GitHub secret scanning
 
-## How to report issues
-When opening an issue, please include:
-- What you were trying to do
-- Steps to reproduce
-- Expected vs actual behavior
-- Environment (OS, Python/node version)
+Roadmap
 
-## License
-Add a LICENSE file (recommended: MIT) and reference it here.
+[x] README, LICENSE
 
-## Contact
-Owner: https://github.com/kiko1842
+[ ] CI setup
+
+[ ] Core scripts: fetch, indicators, backtest
+
+[ ] Sample configs and datasets
+
+[ ] Strategy expansion and reporting
+
+[ ] Docker image publishing
+
+Contributing
+
+Open issues with clear steps and environment info
+
+Follow coding style and test requirements
+
+Use linters and formatters
+
+Contact
+
+Maintainer: @kiko1842
