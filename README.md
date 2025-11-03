@@ -96,4 +96,3 @@ Add a LICENSE file (recommended: MIT) and reference it here.
 
 ## Contact
 Owner: https://github.com/kiko1842
-If you want help prioritizing next steps or creating files (LICENSE, CI, CONTRIBUTING, example scripts), I can generate them for you.
