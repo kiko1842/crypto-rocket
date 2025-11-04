@@ -1,5 +1,35 @@
-For JavaScript/TypeScript projects:
+Crypto Rocket
 
+Crypto Rocket is a lightweight, open-source toolkit for exploring cryptocurrency data and prototyping trading strategies. It includes utilities to fetch market data, compute indicators, and run local backtests — ideal for developers experimenting with crypto workflows.
+
+Quick Summary
+
+Purpose: Fetch crypto market data, compute indicators, and run local strategy experiments.
+
+Status: Early-stage prototype.
+
+License: MIT (see LICENSE file)
+
+Features
+
+Market and candlestick data from public APIs (configurable)
+
+Basic indicators: SMA, EMA, RSI
+
+Sample scripts for backtesting and analysis
+
+Dockerfile and local run instructions
+
+Installation (Local)
+
+git clone https://github.com/kiko1842/crypto-rocket.git
+cd crypto-rocket
+python -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+
+For JavaScript/TypeScript projects:
 npm install
 # or
 yarn install
@@ -13,7 +43,7 @@ python scripts/fetch_data.py --symbol BTCUSDT --interval 1h --limit 500
 python scripts/run_indicator.py --symbol BTCUSDT --indicator sma --period 20
 
 # Run a backtest
-python scripts/backtest.py --strategy simple_mean_reversion --symbol BTCUSDT --from 2023-01-01 --to 2024-01-01
+python scripts/backtest.py --strategy simple_mean_reversion --symbol BTCUSDT --from 2023-01-01 --to 2024-01-01 
 
 Configuration & Secrets
 
@@ -25,7 +55,6 @@ API_KEY=your_api_key_here
 API_SECRET=your_api_secret_here
 
 Docker (Optional)
-
 # Build
 docker build -t crypto-rocket:local .
 
@@ -71,3 +100,7 @@ Use linters and formatters
 Contact
 
 Maintainer: @kiko1842
+
+
+
+
