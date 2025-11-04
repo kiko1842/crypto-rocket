@@ -1,106 +1,50 @@
-Crypto Rocket
+Crypto Rocket is a lightweight, open-source toolkit for exploring cryptocurrency data and prototyping trading strategies. It provides utilities for fetching market and candlestick data, calculating basic indicators like SMA, EMA, and RSI, and running local backtests—ideal for developers experimenting with crypto workflows or integrating NFT/coin projects on the Zora protocol.
 
-Crypto Rocket is a lightweight, open-source toolkit for exploring cryptocurrency data and prototyping trading strategies. It includes utilities to fetch market data, compute indicators, and run local backtests — ideal for developers experimenting with crypto workflows.
+## Quick Summary
+- **Purpose:** Fetch crypto market data, compute indicators, and run local strategy experiments.
+- **Status:** Early-stage prototype.
+- **License:** Code is MIT (see LICENSE); NFT artworks and assets are CC0 Public Domain.
 
-Quick Summary
+## Features
+- Market and candlestick data from public APIs (configurable)
+- Basic indicators: SMA, EMA, RSI
+- Sample scripts for backtesting and analysis
+- Dockerfile and instructions for local runs
 
-Purpose: Fetch crypto market data, compute indicators, and run local strategy experiments.
+## NFT & Creative Assets
+All NFT artworks and creative assets in this repository are released under the CC0 1.0 Universal (Public Domain Dedication) license. See LICENSE for full terms.
 
-Status: Early-stage prototype.
+## Installation
+1. Clone the repository:
+   ```
+   git clone https://github.com/kiko1842/crypto-rocket.git
+   ```
+2. Change into the project directory:
+   ```
+   cd crypto-rocket
+   ```
+3. Install requirements (adjust for your stack, e.g. Python, Node.js, etc.):
+   ```
+   # For Python, example:
+   pip install -r requirements.txt
+   # For Node.js, example:
+   npm install
+   ```
+   *(Edit this section to match your tech stack.)*
 
-License: MIT (see LICENSE file)
+## Usage
+- Run provided scripts or notebooks to fetch crypto data, calculate indicators, or run sample strategies.
+- Start experimenting with your own trading or data analysis ideas!
+- See example scripts and notebooks in the project for guidance.
 
-Features
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b my-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin my-feature`)
+5. Open a pull request
 
-Market and candlestick data from public APIs (configurable)
-
-Basic indicators: SMA, EMA, RSI
-
-Sample scripts for backtesting and analysis
-
-Dockerfile and local run instructions
-
-Installation (Local)
-
-git clone https://github.com/kiko1842/crypto-rocket.git
-cd crypto-rocket
-python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-.venv\Scripts\activate     # Windows
-pip install -r requirements.txt
-
-For JavaScript/TypeScript projects:
-npm install
-# or
-yarn install
-
-Quick Start — Examples
-
-# Fetch sample data
-python scripts/fetch_data.py --symbol BTCUSDT --interval 1h --limit 500
-
-# Run indicator calculation
-python scripts/run_indicator.py --symbol BTCUSDT --indicator sma --period 20
-
-# Run a backtest
-python scripts/backtest.py --strategy simple_mean_reversion --symbol BTCUSDT --from 2023-01-01 --to 2024-01-01 
-
-Configuration & Secrets
-
-Store API keys in a .env file (never commit secrets)
-
-Example .env:
-
-API_KEY=your_api_key_here
-API_SECRET=your_api_secret_here
-
-Docker (Optional)
-# Build
-docker build -t crypto-rocket:local .
-
-# Run
-docker run --env-file .env --rm crypto-rocket:local python scripts/fetch_data.py --symbol BTCUSDT
-
-Tests & CI
-
-Use pytest or jest for core functions
-
-Add GitHub Actions workflow for linting and tests
-
-Security Checklist
-
-Add .gitignore and LICENSE
-
-Run pip-audit or npm audit
-
-Use git-secrets or GitHub secret scanning
-
-Roadmap
-
-[x] README, LICENSE
-
-[ ] CI setup
-
-[ ] Core scripts: fetch, indicators, backtest
-
-[ ] Sample configs and datasets
-
-[ ] Strategy expansion and reporting
-
-[ ] Docker image publishing
-
-Contributing
-
-Open issues with clear steps and environment info
-
-Follow coding style and test requirements
-
-Use linters and formatters
-
-Contact
-
-Maintainer: @kiko1842
-
-
-
-
+## License
+- **Code:** MIT License - see LICENSE
+- **NFT and Artwork:** CC0 1.0 Universal (see LICENSE for terms)
