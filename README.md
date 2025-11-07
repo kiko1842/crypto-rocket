@@ -1,3 +1,8 @@
+This project is part of the CryptoRocketter ecosystem. Early supporters can mint access or support tokens via Zora.”
+
+[![Launch on Zora](https://img.shields.io/badge/Launch%20on-Zora-blue)](https://zora.co/invite/cryptorocketterzora)
+
+
 Crypto Rocket is a lightweight, open-source toolkit for exploring cryptocurrency data and prototyping trading strategies. It provides utilities for fetching market and candlestick data, calculating basic indicators like SMA, EMA, and RSI, and running local backtests—ideal for developers experimenting with crypto workflows or integrating NFT/coin projects on the Zora protocol.
 
 ## Quick Summary
